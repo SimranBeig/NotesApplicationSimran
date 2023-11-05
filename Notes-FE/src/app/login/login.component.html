@@ -1,0 +1,31 @@
+<div class="container-fluid" *ngIf="display">
+	<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+		<div class="row">
+			<h2>Login</h2>
+
+			<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm?.value)">
+				<div *ngIf="error" class="alert alert-danger" role="alert">
+					{{error}}
+				</div>
+				<div class="mb-3">
+					<label for="exampleInputEmail1" class="form-label">Username</label>
+					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+						name="username" [ngModel]="userData.username">
+				</div>
+				<div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Password</label>
+					<input type="password" class="form-control" id="exampleInputPassword1" name="password"
+						[ngModel]="userData.password">
+				</div>
+
+				<button type="submit" class="btn btn-dark">Login</button>
+				<div class="mt-3">
+					<p>Don't have an account? <a (click)="navigateToRegistration()" style="color: blue;">Register
+							here</a>
+					</p>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</div>

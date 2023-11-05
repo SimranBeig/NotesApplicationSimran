@@ -1,0 +1,23 @@
+table {
+	width: 100%;
+}
+
+.table {
+	margin-bottom: 20px;
+}
+
+.table thead th {
+	text-align: center;
+}
+
+.table tbody td:last-child {
+	text-align: center;
+}
+
+.edit-button {
+	margin-right: 10px;
+}
+
+.delete-button {
+	margin-left: 10px;
+}

@@ -1,0 +1,27 @@
+<div class="modal-container">
+	<mat-dialog-content class="modal-content">
+		<button mat-icon-button class="close-button" (click)="closeDialog()">
+			<mat-icon>close</mat-icon>
+		</button>
+		<h2>Edit Note</h2>
+		<form>
+			<div class="row">
+				<!-- <div class="mb-3 my-3"> -->
+				<input hidden class="form-control" name="id" placeholder="Title" [(ngModel)]="editedNote.id">
+				<!-- </div> -->
+				<div class="mb-3 my-3">
+					<input class="form-control" name="noteTitle" placeholder="Title" [(ngModel)]="editedNote.title">
+				</div>
+
+				<div class="mb-3 my-3">
+					<textarea class="form-control" name="noteDescription" placeholder="Description"
+						[(ngModel)]="editedNote.description"></textarea>
+				</div>
+
+				<button mat-raised-button class="btn btn-dark" (click)="saveChanges()">Save Changes</button>
+
+
+			</div>
+		</form>
+	</mat-dialog-content>
+</div>

@@ -1,0 +1,29 @@
+.modal-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* min-height: 100vh; */
+}
+
+.modal-content {
+	padding: 20px;
+	background-color: #fff;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+}
+
+/* create-note.component.css */
+.close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #888;
+	/* Button color */
+	border: none;
+	background: transparent;
+}
+
+.close-button:hover {
+	color: #000;
+	/* Hover color */
+}

@@ -1,0 +1,39 @@
+<div>
+	<app-navbar></app-navbar>
+</div>
+
+<div class="container">
+	<div class="row mb-3 mt-3">
+		<div class=" col">
+			<input type="text" class="form-control" [(ngModel)]="searchWord" placeholder="Search...">
+		</div>
+		<div class="col">
+			<button class="btn btn-dark float-right" (click)="addNote()">Add New Note</button>
+		</div>
+
+	</div>
+
+	<table class="table table-striped table-bordered table-hover">
+		<thead class="thead-dark">
+			<tr>
+				<th>Title</th>
+				<th>Description</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let note of filterNotes()">
+				<td>{{ note.title }}</td>
+				<td>{{ note.description }}</td>
+				<td>
+					<button class="btn btn-warning edit-button" (click)="editNote(note.id)">
+						<i class="fas fa-edit"></i> Edit
+					</button>
+					<button class="btn btn-danger delete-button" (click)="deleteNote(note.id)">
+						<i class="fas fa-trash"></i> Delete
+					</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
